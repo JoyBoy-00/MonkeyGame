@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catch Me If You Can!</title>
+    <style>
+        .game-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #target-btn {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+        }
+        .score {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
+        #hidden-img {
+            display: none;
+        }
+        .code-display {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-family: monospace;
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tap on the monkey and achieve a score of 1000+ to win this game!</h1>
+        <div class="score">Score: <span id="score">0</span></div>
+        <img src="monkey.svg" id="target-btn">
+        <div class="code-display">
+            <p>Secret Code:</p>
+            <div id="encrypted-code"></div>
+            <p class="hint">Decrypt this code.</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
